@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Toolkit Pro — Redirecting...</title>
+  <script>
+    // GitHub Pages SPA router: redirects sub-routes to root preserving tool or hash
+    (function() {
+      var pathname = window.location.pathname;
+      var hash = window.location.hash;
+      var search = window.location.search;
+
+      var toolMatch = pathname.match(/(?:tools\/)?(?:tool-)?([a-zA-Z0-9_-]+)(?:\.html)?$/);
+      if (toolMatch && toolMatch[1] && toolMatch[1] !== 'index' && toolMatch[1] !== '404') {
+        window.location.replace('/#tool=' + toolMatch[1]);
+        return;
+      }
+
+      if (hash) {
+        window.location.replace('/' + hash);
+        return;
+      }
+
+      window.location.replace('/');
+    })();
+  </script>
+</head>
+<body>
+  <p>Loading Toolkit Pro...</p>
+</body>
+</html>
