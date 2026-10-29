@@ -1,11 +1,44 @@
-<div align="center">
+# Toolkit Pro — React Application
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A modern React SPA (Vite + TypeScript) providing 218+ free browser-based tools for text, images, PDFs, calculators, unit converters, security, and developer utilities.
 
-  <h1>Built with AI Studio</h2>
+Every single tool runs deterministic, local code inside the visitor's browser tab — no AI, no user accounts, and zero file uploads to external servers.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Features
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+- **218+ Browser-Based Tools** across 10 functional categories:
+  - Text & Writing (34 tools)
+  - Image & Design (32 tools)
+  - Calculators & Converters (50 tools)
+  - Dev Tools (29 tools)
+  - Unit Converters (15 tools)
+  - Security (8 tools)
+  - PDF Tools (16 tools)
+  - Productivity (14 tools)
+  - Color & CSS (6 tools)
+  - SEO & Marketing (14 tools)
+- **Local & Private Execution**: Text processing, regex, cryptographic hashes, canvas image manipulation, and PDF operations all run locally in the client.
+- **Full Internationalization (i18n)**: English and Hindi (हिंदी) language support.
+- **Theme Support**: Light, Dark, and System Auto mode with synchronized accent tokens.
+- **Favorites & History**: Save favourite tools and quickly revisit the 12 most recently used tools via localStorage.
+- **Deep Linking**: Direct URL hash navigation support (`#tool=<id>`, `#cat=<category>`, `#search=<term>`, `#all-tools`).
 
-</div>
+## Tech Stack
+
+- **Framework**: React 19 + TypeScript
+- **Build Tool**: Vite 6
+- **Routing**: Client-side hash routing with browser history support
+- **Styling**: Modern CSS Design System with responsive variables & dark mode
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server (host 0.0.0.0, port 3000)
+npm run dev
+
+# Build for production
+npm run build
+```

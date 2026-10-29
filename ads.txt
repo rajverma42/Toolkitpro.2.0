@@ -1,0 +1,21 @@
+# ads.txt for toolkit-pro.in
+#
+# This file tells ad networks and buyers which sellers are authorized to
+# sell ad inventory on this domain (IAB Tech Lab ads.txt standard).
+#
+# ACTION NEEDED: the two lines below are placeholders. Log into each ad
+# network's publisher dashboard and copy the exact ads.txt line they give
+# you (it includes YOUR unique publisher/seller ID) to replace them:
+#
+#   Adsterra (highrevenueformat.com ad units):
+#     Dashboard -> ads.txt tool, or Account Settings -> "Ads.txt manager"
+#
+#   ProfitableRateCPMNetwork (native ad unit):
+#     Dashboard -> Sites -> ads.txt manager
+#
+# Until the real publisher IDs are filled in, this file has no effect
+# (ad networks simply won't find a matching line and skip verification --
+# it does not break existing ads).
+
+# highrevenueformat.com, PUBLISHER_ID_HERE, DIRECT
+# profitableratecpmnetwork.com, PUBLISHER_ID_HERE, DIRECT

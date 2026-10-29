@@ -1,0 +1,29 @@
+{
+  "name": "Toolkit Pro \u2014 218+ Free Online Tools",
+  "short_name": "Toolkit Pro",
+  "description": "218+ free browser-based tools for text, images, PDFs, calculators, converters, security and developers. No AI, no accounts, no server uploads.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B1220",
+  "theme_color": "#2563EB",
+  "icons": [
+    {
+      "src": "favicon/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
