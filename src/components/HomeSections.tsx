@@ -3,6 +3,7 @@ import type { Tool, Language } from '../types';
 import { ToolCard } from './ToolCard';
 import { popularToolIds, allTools } from '../data/tools';
 import { t } from '../data/i18n';
+import { AdBanner } from './AdBanner';
 
 interface HomeSectionsProps {
   language: Language;
@@ -304,6 +305,9 @@ export const HomeSections: React.FC<HomeSectionsProps> = ({
         )}
       </div>
 
+      {/* Responsive In-Feed / Banner Ad Slot */}
+      <AdBanner slotType="top-banner" />
+
       {/* Favourite Tools */}
       <div className="home-section">
         <div className="section-head">
@@ -369,6 +373,9 @@ export const HomeSections: React.FC<HomeSectionsProps> = ({
           {browseAllLabel}
         </button>
       </div>
+
+      {/* Native Sponsored Recommendations Banner */}
+      <AdBanner slotType="native" />
 
       {/* FAQ */}
       <div

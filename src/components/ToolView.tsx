@@ -3,6 +3,7 @@ import type { Tool, Language } from '../types';
 import { categories, runToolCleanup, getRelatedTools } from '../data/tools';
 import { getToolName, getToolDesc, t } from '../data/i18n';
 import { ToolUsageGuide } from './ToolUsageGuide';
+import { AdBanner } from './AdBanner';
 
 interface ToolViewProps {
   tool: Tool;
@@ -225,6 +226,9 @@ export const ToolView: React.FC<ToolViewProps> = ({
         </div>
       </div>
 
+      {/* Top Banner Ad: 728x90 on Desktop, 320x50 on Mobile */}
+      {!isFocusMode && <AdBanner slotType="top-banner" />}
+
       {/* Main Tool Window Container */}
       <div
         style={{
@@ -252,8 +256,14 @@ export const ToolView: React.FC<ToolViewProps> = ({
         <div className="tool-view-body" ref={containerRef} style={{ border: 'none' }}></div>
       </div>
 
+      {/* Workspace Ad Unit: 300x250 Medium Rectangle */}
+      {!isFocusMode && <AdBanner slotType="rectangle-300x250" />}
+
       {/* Dynamic How-To-Use Collapsible Guide */}
       <ToolUsageGuide tool={tool} language={language} />
+
+      {/* Native Sponsored Banner */}
+      {!isFocusMode && <AdBanner slotType="native" />}
 
       {/* Related Tools */}
       {related.length > 0 && !isFocusMode && (

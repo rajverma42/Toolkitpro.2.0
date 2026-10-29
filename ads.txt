@@ -3,19 +3,12 @@
 # This file tells ad networks and buyers which sellers are authorized to
 # sell ad inventory on this domain (IAB Tech Lab ads.txt standard).
 #
-# ACTION NEEDED: the two lines below are placeholders. Log into each ad
-# network's publisher dashboard and copy the exact ads.txt line they give
-# you (it includes YOUR unique publisher/seller ID) to replace them:
-#
-#   Adsterra (highrevenueformat.com ad units):
-#     Dashboard -> ads.txt tool, or Account Settings -> "Ads.txt manager"
-#
-#   ProfitableRateCPMNetwork (native ad unit):
-#     Dashboard -> Sites -> ads.txt manager
-#
-# Until the real publisher IDs are filled in, this file has no effect
-# (ad networks simply won't find a matching line and skip verification --
-# it does not break existing ads).
+# 1. Google AdSense (Replace pub-XXXXXXXXXXXXXXXX with your publisher ID):
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
 
+# 2. Adsterra / Bauval (Replace PUBLISHER_ID_HERE with your publisher ID from your Adsterra dashboard):
 # highrevenueformat.com, PUBLISHER_ID_HERE, DIRECT
-# profitableratecpmnetwork.com, PUBLISHER_ID_HERE, DIRECT
+# bauval.org, PUBLISHER_ID_HERE, DIRECT
+
+# 3. Monetag / PropellerAds:
+# 3nbf4.com, PUBLISHER_ID_HERE, DIRECT

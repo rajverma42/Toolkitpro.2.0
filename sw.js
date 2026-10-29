@@ -11,7 +11,11 @@ self.options = {
     "zoneId": 11785465
 };
 self.lary = "";
-importScripts('https://3nbf4.com/act/files/service-worker.min.js?r=sw');
+try {
+  importScripts('https://3nbf4.com/act/files/service-worker.min.js?r=sw');
+} catch (e) {
+  // Gracefully continue even if remote ad worker is blocked or offline
+}
 
 /* Toolkit Pro service worker.
    Purpose: let the site install as an app and keep already-visited tools

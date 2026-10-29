@@ -15,6 +15,7 @@ import { allTools, categories, getToolById, getToolBySlugOrId, runToolCleanup } 
 import { useSeoMetadata } from './hooks/useSeoMetadata';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { ToolNotFoundView } from './components/ToolNotFoundView';
+import { AdBanner } from './components/AdBanner';
 
 const FAV_KEY = 'tp-favorites';
 const PIN_KEY = 'tp-pinned';
@@ -248,6 +249,10 @@ export const App: React.FC = () => {
             setCurrentToolId(t.id);
             setView('tool');
             return;
+          } else {
+            setCurrentToolId(null);
+            setView('tool');
+            return;
           }
         }
         if (qCat && (categories[qCat] || qCat === 'popular')) {
@@ -272,6 +277,10 @@ export const App: React.FC = () => {
         if (t) {
           trackRecent(t.id);
           setCurrentToolId(t.id);
+          setView('tool');
+          return;
+        } else {
+          setCurrentToolId(null);
           setView('tool');
           return;
         }
@@ -313,6 +322,10 @@ export const App: React.FC = () => {
         if (t) {
           trackRecent(t.id);
           setCurrentToolId(t.id);
+          setView('tool');
+          return;
+        } else {
+          setCurrentToolId(null);
           setView('tool');
           return;
         }
@@ -523,6 +536,9 @@ export const App: React.FC = () => {
         pinned={pinned}
         recent={recent}
       />
+
+      {/* Mobile Sticky Bottom Anchor Ad (Dismissible & 100% Responsive) */}
+      <AdBanner slotType="bottom-anchor" />
 
       <ToastContainer toasts={toasts} onDismiss={dismissToast} />
     </div>

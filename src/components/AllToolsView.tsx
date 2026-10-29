@@ -3,6 +3,7 @@ import type { Tool, Language } from '../types';
 import { ToolCard } from './ToolCard';
 import { allTools, categories, trendingIds, popularToolIds } from '../data/tools';
 import { t } from '../data/i18n';
+import { AdBanner } from './AdBanner';
 
 interface AllToolsViewProps {
   language: Language;
@@ -278,6 +279,9 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({
         </div>
       </div>
 
+      {/* Top Banner Ad Slot for All Tools */}
+      <AdBanner slotType="top-banner" />
+
       {sorted.length === 0 ? (
         <div className="empty-state" style={{ background: 'var(--surface)', border: '1px dashed var(--border)', borderRadius: 'var(--radius-m)', padding: '60px 20px' }}>
           <div className="big">{t('ui.emptyBinTitle', language) || 'No Tools Found'}</div>
@@ -330,6 +334,9 @@ export const AllToolsView: React.FC<AllToolsViewProps> = ({
           ))}
         </div>
       )}
+
+      {/* Bottom Native Sponsored Banner */}
+      <AdBanner slotType="native" />
     </div>
   );
 };
